@@ -1,0 +1,12 @@
+apiVersion: kaptain.org/1.29
+kind: kubernetes-bundle-resources
+metadata:
+  description: "Keelson foreign namespace RBAC - Role and RoleBinding granting the Keelson ServiceAccount workload access in a namespace Keelson isn't deployed in"
+
+spec:
+  layers:
+    - ghcr.io/kube-kaptain/layerset/layerset-cluster-use-project:[1.1]
+  global:
+    release:
+      versioning:
+        maxParts: '2'
